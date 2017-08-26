@@ -16,7 +16,7 @@
 		<!-- column -->
 		<div class="col-md-12 text-center">
 			<!-- heading -->
-		  	<h1>Eat-Da-Burger!</h1>
+		  	<h1>BunBunBurger!</h1>
 		<!-- end column -->
 		</div>
 	<!-- end row 2 -->
@@ -27,7 +27,7 @@
 		<!-- column 1 - TASTY BURGERS -->
 		<div class="col-md-6 text-center">
 
-			<h2>Tasty Burgers!</h2>
+			<h2>Itadakimasu!</h2>
 
 			<ol>
 				{{#each burgers}}
@@ -51,7 +51,7 @@
 		<!-- column 2 - DEVOURED BURGERS -->
 		<div class="col-md-6 text-center">
 
-			<h2>NYOM Nom Nom!</h2>
+			<h2>Gochiso Sama Deshita!</h2>
 
 			<ol>
 				{{#each burgers}}
@@ -59,10 +59,10 @@
 						<li>
 							<h3>
 							{{this.burger_name}}
-							... Gochiso Sama Deshita!
+							... OM NOM NYOM
 							<h3>
-
-					        {{!-- {{> burgers/delete-burger}} --}}
+							<!-- Comment this out if you do not want them to disappear. Also take out the partials function 'delete-burger' -->
+					        {{> burgers/delete-burger}} 
 
 						</li>
 					{{/if}}
