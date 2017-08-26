@@ -6,6 +6,34 @@ const connection = require('../config/connection.js');
 // ORM turns inputs and conditions into DB commands for SQL
 
 // ==============================================================================
+
+function printQuestionMarks(num) {
+	var arr = [];
+
+	for (var i = 0; i < num; i++) {
+		arr.push('?');
+	}
+
+	return arr.toString();
+}
+
+function objToSql(ob) {
+	// column1=value, column2=value2,...
+	var arr = [];
+
+	for (var key in ob) {
+		if (ob.hasOwnProperty(key)) {
+			arr.push(key + '=' + ob[key]);
+		}
+	}
+
+	return arr.toString();
+}
+
+
+// ORM turns inputs and conditions into database commands like SQL
+// ==============================================================================
+
 let orm = {
 	// Queries all records from the table
 	selectAll: function (tableInput, cb) {
