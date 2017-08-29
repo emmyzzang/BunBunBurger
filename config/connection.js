@@ -4,6 +4,7 @@
 const mysql = require('mysql'); 
 let connection; 
 
+//This takes care of both cases -- remote and local dbs 
 if (process.env.JAWSDB_URL) {
 	connection  = mysql.createConnection(process.env.JAWSDB_URL); 
 }
